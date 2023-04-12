@@ -428,43 +428,14 @@
 
 
 //2.17.2
+// function calc() {
+//     let prom = prompt("Введите математическое выражение:");
+//     let result = eval(prom);
+//     alert("Результат: " + result);
+// }
 
-// const calculator = {
-//     memory: 0,
-//     add: function (num1, num2) {
-//         return num1 + num2;
-//     },
-//     subtract: function (num1, num2) {
-//         return num1 - num2;
-//     },
-//     multiply: function (num1, num2) {
-//         return num1 * num2;
-//     },
-//     divide: function (num1, num2) {
-//         return num1 / num2;
-//     },
-//     clearMemory: function () {
-//         this.memory = 0;
-//     },
-//     addToMemory: function (num) {
-//         this.memory += num;
-//     },
-//     readMemory: function () {
-//         return this.memory;
-//     },
-//     saveToMemory: function (num) {
-//         this.memory = num;
-//     }
-// };
+// calc()
 
-
-// console.log(calculator.add(5, 7));
-// calculator.saveToMemory(12);
-// console.log(calculator.readMemory());
-// calculator.addToMemory(5);
-// console.log(calculator.readMemory());
-// calculator.clearMemory();
-// console.log(calculator.readMemory());
 
 //2.18.1
 
@@ -491,14 +462,9 @@
 
 //2.18.3
 
-
-
-
-
-
-
-
-
+// let binary = "11010";
+// let digit = parseInt(binary, 2);
+// console.log(digit);
 
 //2.19.1
 
