@@ -482,5 +482,126 @@
 // }
 
 // const transaction = new Transaction('Musteri 1', 'Musteri 2', 250);
-// console.log(transaction.commission); 
+// console.log(transaction.commission);
 
+//2.20.1
+
+// class SimpleCalc {
+//     constructor(number) {
+//         this.number = number;
+//     }
+
+//     plus(number) {
+//         this.number += number;
+//         return this;
+//     }
+
+//     mult(number) {
+//         this.number *= number;
+//         return this;
+//     }
+
+//     divide(number) {
+//         this.number /= number;
+//         return this;
+//     }
+
+//     minus(number) {
+//         this.number -= number;
+//         return this;
+//     }
+
+//     toString() {
+//         return this.number.toString();
+//     }
+// }
+
+// class ProgrammerCalc extends SimpleCalc {
+//     toString() {
+//         return this.number.toString(2);
+//     }
+// }
+
+// let calc = new SimpleCalc(190);
+// let progCalc = new ProgrammerCalc(150);
+
+// const result = calc.plus(2).mult(4).divide(4).toString();
+// console.log(result);
+// const progResult = progCalc.plus(2).mult(4).divide(4).toString();
+// console.log(progResult);
+
+
+//2.20.2
+// class User {
+//     constructor(id, name) {
+//         this.id = id;
+//         this.name = name;
+//     }
+
+//     rename(newName) {
+//         this.name = newName;
+//     }
+// }
+
+// class UsersList {
+//     constructor() {
+//         this.users = [];
+//         this.currentId = 0;
+//     }
+
+//     addUser(name) {
+//         const newUser = new User(this.currentId, name);
+//         this.currentId++;
+//         this.users.push(newUser);
+//     }
+
+//     removeUser(id) {
+//         this.users = this.users.filter(user => user.id !== id);
+//     }
+
+//     renameUser(id, newName) {
+//         const userToRename = this.users.find(user => user.id === id);
+//         if (userToRename) {
+//             userToRename.rename(newName);
+//         }
+//     }
+
+//     getAllUsersString() {
+//         return this.users.map(user => `${user.id}: ${user.name}`).join("; ");
+//     }
+// }
+
+// class Application {
+//     constructor() {
+//         this.usersList = new UsersList();
+//     }
+
+//     init() {
+//         while (true) {
+//             const command = prompt("Введите команду (create, rename или remove):");
+//             let id, name;
+
+//             if (command === "create") {
+//                 name = prompt("Введите имя пользователя:");
+//                 this.usersList.addUser(name);
+//             } else if (command === "rename") {
+//                 id = prompt("Введите id пользователя:");
+//                 name = prompt("Введите новое имя пользователя:");
+//                 this.usersList.renameUser(parseInt(id), name);
+//             } else if (command === "remove") {
+//                 id = prompt("Введите id пользователя:");
+//                 this.usersList.removeUser(parseInt(id));
+//             } else if (command === null) {
+//                 // пользователь нажал "Отмена"
+//                 break;
+//             } else {
+//                 alert("Неверная команда!");
+//             }
+
+//             console.log(this.usersList.getAllUsersString());
+//         }
+//     }
+// }
+
+// const app = new Application();
+// app.init();
